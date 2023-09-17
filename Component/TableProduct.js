@@ -16,6 +16,7 @@ import {
 import CompButton from "./CompButton";
 import FlexibleShape from "./FlexibleShape";
 import { AiOutlineFolderAdd } from "react-icons/ai";
+import OverlayButtonAdd from "./OverlayButtonAdd";
 
 function TableProducts() {
   const datatable = [
@@ -65,17 +66,7 @@ function TableProducts() {
               Store Revenue
             </Text>
             <Flex w="1119px" justifyContent="flex-end">
-              <CompButton
-                ColorB="#27AE6010"
-                TextColor="#27AE60"
-                SizeText="16px"
-                fontType="Bold"
-                px="30px"
-                py="30px"
-                Alignitems="center"
-                LIcon={<AiOutlineFolderAdd color="#27AE60" boxSize="18px" />}
-                text="Add Product"
-              />
+              <OverlayButtonAdd />
             </Flex>
             <FlexibleShape
               w="1119px"
@@ -127,7 +118,7 @@ function TableProducts() {
                                   : "#FFFFFF"
                               }
                               SizeText="16px"
-                              fontType="Bold"
+                              fontType="semibold"
                               w="135px"
                               px="10px"
                               py="10px"

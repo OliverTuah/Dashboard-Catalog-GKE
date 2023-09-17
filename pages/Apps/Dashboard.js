@@ -7,6 +7,7 @@ import { IoShirtOutline } from "react-icons/io5";
 import { PiHoodieLight, PiBaseballCap } from "react-icons/Pi";
 import LineCharts from "@/Component/LineCharts";
 import DataTable from "@/Component/DataTable";
+import DataProduct from "@/Component/DataProduct";
 
 function Dashboard() {
   return (
@@ -18,7 +19,13 @@ function Dashboard() {
               gap={"20px"}
               direction="column"
               overflowY="auto"
-              height="905px">
+              height="905px"
+              css={{
+                scrollbarWidth: "none",
+                "::-webkit-scrollbar": {
+                  display: "none",
+                },
+              }}>
               <Text
                 fontSize={"24px"}
                 fontWeight={"medium"}
@@ -167,6 +174,7 @@ function Dashboard() {
                 />
               </Flex>
               <DataTable />
+              <DataProduct />
             </Flex>
           </Box>
         </Flex>

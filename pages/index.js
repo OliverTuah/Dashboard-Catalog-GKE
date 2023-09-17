@@ -3,6 +3,7 @@ import Navbar from "@/Component/Navbar";
 import { useState } from "react";
 import Dashboard from "./Apps/Dashboard";
 import Product from "./Apps/Product";
+import Order from "./Apps/Order";
 import { Flex } from "@chakra-ui/react";
 
 function index() {
@@ -22,7 +23,7 @@ function index() {
         ) : component == "button2" ? (
           <Product />
         ) : component == "button3" ? (
-          <Dashboard />
+          <Order />
         ) : component == "button4" ? (
           <Product />
         ) : (

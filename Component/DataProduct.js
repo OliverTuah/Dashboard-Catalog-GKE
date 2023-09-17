@@ -15,30 +15,45 @@ import {
 import CompButton from "./CompButton";
 import FlexibleShape from "./FlexibleShape";
 
-function DataTable(data, limit) {
+function DataProduct(data, limit) {
   const datatable = [
     {
-      id: "#1403",
+      id: "#1",
+      name: "Jesus T-Shirt",
+      quantity: 200,
+      price: "Rp400.000",
+      text: "Pending",
+    },
+    {
+      id: "#2",
       name: "Hoodie Jesus",
       quantity: 200,
       price: "Rp400.000",
-      text: "Medium-Stock",
+      text: "Process",
     },
     {
-      id: "#1404",
+      id: "#3",
       name: "Cap Love GKE",
       quantity: 200,
       price: "Rp400.000",
-      text: "Full-Stock",
+      text: "On-Delivery",
     },
     {
-      id: "#1405",
+      id: "#4",
       name: "Stay With Me",
       quantity: 200,
       price: "Rp20.000",
-      text: "Low-Stock",
+      text: "Cancel",
+    },
+    {
+      id: "#5",
+      name: "Halo GKE",
+      quantity: 200,
+      price: "Rp150.000",
+      text: "On-Delivery",
     },
   ];
+
   return (
     <>
       <Flex direction={"column"}>
@@ -59,16 +74,16 @@ function DataTable(data, limit) {
                 fontSize={"16px"}
                 fontWeight={"Bold"}
                 textColor={"#333333"}>
-                Product Status
+                Product Order
               </Text>
               <TableContainer h="100%" w="100%" maxH="100%" maxW="100%">
                 <Table variant="simple">
                   <Thead color="#333333">
                     <Tr>
-                      <Th>Product ID</Th>
+                      <Th>Receipt No</Th>
                       <Th>Product Name</Th>
                       <Th>Quantity</Th>
-                      <Th>Price</Th>
+                      <Th>Total Price</Th>
                       <Th>Status</Th>
                       <Th>Action</Th>
                     </Tr>
@@ -83,25 +98,29 @@ function DataTable(data, limit) {
                         <Td>
                           <CompButton
                             ColorB={
-                              item.text === "Full-Stock"
-                                ? "#27AE6010"
-                                : item.text === "Medium-Stock"
+                              item.text === "Pending"
+                                ? "#9B51E010"
+                                : item.text === "Process"
                                 ? "#F2C94C10"
-                                : item.text === "Low-Stock"
+                                : item.text === "On-Delivery"
+                                ? "#21965310"
+                                : item.text === "Cancel"
                                 ? "#EB575710"
                                 : "#FFFFFF"
                             }
                             TextColor={
-                              item.text === "Full-Stock"
-                                ? "#27AE60"
-                                : item.text === "Medium-Stock"
+                              item.text === "Pending"
+                                ? "#9B51E0"
+                                : item.text === "Process"
                                 ? "#F2C94C"
-                                : item.text === "Low-Stock"
+                                : item.text === "On-Delivery"
+                                ? "#219653"
+                                : item.text === "Cancel"
                                 ? "#EB5757"
                                 : "#FFFFFF"
                             }
                             SizeText="16px"
-                            fontType="Bold"
+                            fontType="semibold"
                             w="135px"
                             px="10px"
                             py="10px"
@@ -125,4 +144,4 @@ function DataTable(data, limit) {
   );
 }
 
-export default DataTable;
+export default DataProduct;
